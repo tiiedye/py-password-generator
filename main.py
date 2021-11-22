@@ -39,4 +39,5 @@ for symbol in symbols:
 random.shuffle(pw)
 result = ''.join(pw)
 
+print("Your password is:")
 print(result)
