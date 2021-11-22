@@ -23,5 +23,5 @@ for symbol in range(1, nr_symbols + 1):
 random.shuffle(pw)
 result = ''.join(pw)
 
-print("Your new password is:")
+print("\nYour new password is:")
 print(result)
