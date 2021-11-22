@@ -10,31 +10,15 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 pw = []
-loops = 0
 
-for letter in letters:
-    if loops >= nr_letters:
-        loops = 0
-        break
-    index = random.randint(0, len(letters) - 1)
-    pw.append(letters[index])
-    loops += 1
+for char in range(1, nr_letters + 1):
+    pw.append(random.choice(letters))
 
-for num in numbers:
-    if loops >= nr_numbers:
-        loops = 0
-        break
-    index = random.randint(0, len(numbers) - 1)
-    pw.append(numbers[index])
-    loops += 1
+for num in range(1, nr_numbers + 1):
+    pw.append(random.choice(numbers))
 
-for symbol in symbols:
-    if loops >= nr_symbols:
-        loops = 0
-        break
-    index = random.randint(0, len(symbols) - 1)
-    pw.append(symbols[index])
-    loops += 1
+for symbol in range(1, nr_symbols + 1):
+    pw.append(random.choice(symbols))
 
 random.shuffle(pw)
 result = ''.join(pw)
